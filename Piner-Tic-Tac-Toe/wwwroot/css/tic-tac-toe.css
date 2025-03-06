@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    background-color: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.box {
+    background-image: url(/images/background.png);
+    background-size: cover;
+}
+
+h1 {
+    font-weight: bold;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Mode Selection Buttons */
+.mode-selection {
+    margin-bottom: 20px;
+}
+
+    .mode-selection button {
+        font-size: 1.2em;
+        padding: 10px 20px;
+        margin: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .mode-selection button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+/* Scoreboard */
+#scoreboard {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+}
+
+    #scoreboard p {
+        margin: 5px 0;
+        font-weight: bold;
+    }
+
+/* Game Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 8px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    font-size: 2.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 0.5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 128, 128, 0.3), 0 10px 20px rgba(0, 128, 255, 0.2), 0 2px 4px rgba(255, 255, 255, 0.1) inset;
+    transition: all 0.3s ease;
+    color: white;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+    .cell:hover {
+        transform: scale(1.05);
+        background: white;
+        box-shadow: 0 5px 8px rgba(0, 128, 128, 0.5), 0 15px 25px rgba(0, 128, 255, 0.3);
+        color: black;
+        text-shadow: none;
+    }
+
+    .cell.taken {
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+
+
+/* Winning message */
+#status {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #28a745;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Restart Button */
+.btn-danger {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+    .btn-danger:hover {
+        background-color: #c82333;
+        transform: scale(1.1);
+        box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3);
+    }
